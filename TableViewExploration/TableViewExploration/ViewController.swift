@@ -30,16 +30,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // 0%2 = 0, 1%2 = 1, 2%2 = 0...
         if indexPath.row % 2 == 0{
-        
-        cell = tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifiers.FirstCell.rawValue, forIndexPath: indexPath)
-            if let cellSubclass = cell as? Cell1TableTableViewCell {
-                cellSubclass.cellTitle.text = "Hi Cina"
-                cellSubclass.cellSubtitle.text = "Bye Cina"
+            
+            cell = tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifiers.FirstCell.rawValue, forIndexPath: indexPath)
+            if let cellSubclass = cell as? Cell1TableViewCell {
+                cellSubclass.cell1Title.text = "Hi Cina"
+                cellSubclass.cell1Description.text = "Bye Cina"
             }
         } else {
             cell = tableView.dequeueReusableCellWithIdentifier(tableViewCellIdentifiers.SecondCell.rawValue, forIndexPath: indexPath)
+            if let cellSubclass = cell as? Cell2TableViewCell {
+                cellSubclass.cell2Title.text = "Poop"
+                
+            }
         }
-    
+        
         return cell
     }
     
@@ -59,7 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var height:CGFloat = 60
         if indexPath.row % 2 == 0 {
-           height = 120
+            height = 120
         }
         return height
     }
@@ -68,20 +72,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == tableViewCellIdentifiers.FirstCell.rawValue {
             
             if let cell1ViewController = segue.destinationViewController as? cell1DetailViewController {
-                cell1ViewController.cell1Title.text = "This is super great!"
+                cell1ViewController.titleString1 = "This is Cool!"
             }
+        }
             
-        } else if segue.identifier == tableViewCellIdentifiers.SecondCell.rawValue {
+        else if segue.identifier == tableViewCellIdentifiers.SecondCell.rawValue {
             
             if let cell2ViewController = segue.destinationViewController as? cell2DetailViewController {
-                cell2ViewController.cell2Title.text = "This sucks"
+                cell2ViewController.titleString2 = "This sucks"
+                
             }
             
-        }
             
         }
-    }
-    
-    
+}
 
 
+
+
+}

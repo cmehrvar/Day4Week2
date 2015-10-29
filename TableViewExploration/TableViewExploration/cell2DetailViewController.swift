@@ -10,14 +10,14 @@ import UIKit
 
 class cell2DetailViewController: UIViewController {
 
-    @IBOutlet weak var cell2Title: UILabel!
+    @IBOutlet weak var cell2DescriptionTitle: UILabel!
     
-    var titleString: String?
+    var titleString2: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let actualTitleString = titleString {
-            
+        if let actualTitleString = titleString2 {
+            cell2DescriptionTitle.text = actualTitleString
         }
 
         // Do any additional setup after loading the view.

@@ -8,14 +8,16 @@
 
 import UIKit
 
-class Cell1TableTableViewCell: UITableViewCell {
+class Cell1TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cellTitle: UILabel!
+    @IBOutlet weak var cell1Title: UILabel!
+   
+    @IBOutlet weak var cell1Description: UILabel!
     
-    @IBOutlet weak var cellSubtitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 

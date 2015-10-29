@@ -22,7 +22,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="v7k-df-TrJ" customClass="Cell1TableTableViewCell" customModule="TableViewExploration" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="v7k-df-TrJ" customClass="Cell1TableViewCell" customModule="TableViewExploration" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v7k-df-TrJ" id="FDE-ze-06C">
@@ -55,12 +55,12 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="cellSubtitle" destination="9mT-h9-xpw" id="6i3-OR-I6q"/>
-                                            <outlet property="cellTitle" destination="Pkl-2f-duB" id="f2A-Gh-334"/>
-                                            <segue destination="zex-lF-Hrk" kind="show" identifier="cell1Segue" id="Ejk-il-8B7"/>
+                                            <outlet property="cell1Description" destination="9mT-h9-xpw" id="dA9-J0-4RO"/>
+                                            <outlet property="cell1Title" destination="Pkl-2f-duB" id="8u3-AB-GhY"/>
+                                            <segue destination="zex-lF-Hrk" kind="show" identifier="cell1" id="Ejk-il-8B7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="3mE-5e-u2J">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="3mE-5e-u2J" customClass="Cell2TableViewCell" customModule="TableViewExploration" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="212" width="600" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mE-5e-u2J" id="IvA-0p-CJX">
@@ -83,7 +83,8 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="Oib-bF-aPP" kind="show" identifier="cell2Segue" id="vrr-RC-AsM"/>
+                                            <outlet property="cell2Title" destination="PIc-lE-Cci" id="EIk-IK-5lJ"/>
+                                            <segue destination="Oib-bF-aPP" kind="show" identifier="cell2" id="vrr-RC-AsM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -138,6 +139,9 @@
                             <constraint firstItem="D9H-WH-YoF" firstAttribute="centerX" secondItem="nHS-7S-6Ri" secondAttribute="centerX" id="PCF-FL-WtH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cell1DescriptionTitle" destination="D9H-WH-YoF" id="MOh-h5-WQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1h-HS-QDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +175,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cell2Title" destination="KkY-nF-Hcb" id="v8w-SS-Nto"/>
+                        <outlet property="cell2DescriptionTitle" destination="KkY-nF-Hcb" id="EyZ-JD-TN4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMP-Lb-fO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
